@@ -14,12 +14,13 @@ const config = {
   iceServers: [
     { urls: "stun:stun.l.google.com:19302" },
     {
-      urls: "turn:openrelay.metered.ca:80",
-      username: "openrelayproject",
-      credential: "openrelayproject"
+      urls: "turn:global.relay.metered.ca:80",
+      username: "ec2e7a56fe1e72265fe70627",
+      credential: "e6bpsw7RkgzXTWma"
     }
   ]
 };
+
 
 function App() {
 
