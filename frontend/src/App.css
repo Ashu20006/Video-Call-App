@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0f172a;
+  color: white;
+  font-family: Arial, sans-serif;
+  /* min-height: 100px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* FULL CENTER */
+.container {
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CARD */
+.card {
+  background: #1e293b;
+  padding: 25px;
+  width: 360px;
+  margin: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  text-align: center;
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 6px;
+  border: none;
+}
+
+.btn {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #3b82f6;
+  color: white;
+}
+
+.btn.call {
+  background: #22c55e;
+}
+
+.btn.accept {
+  background: #f97316;
+}
+
+.userid {
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+
+.incoming {
+  margin-top: 20px;
+}
+
+
+
+.online-users {
+  margin-top: 20px;
+  text-align: left;
+  width: 100%;
+}
+
+.user-item {
+  background: #334155;
+  padding: 6px 10px;
+  border-radius: 6px;
+  margin: 5px 0;
+  font-size: 13px;
+}
+
+
+/* Full screen call container */
+.call-screen {
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Remote video = full screen */
+.call-screen .remote {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Local video = small floating (Google Meet style) */
+.call-screen .local {
+  width: 180px;
+  height: 130px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border-radius: 12px;
+  border: 2px solid white;
+  object-fit: cover;
+  background: black;
+}
+
+/* End call button */
+.call-screen .btn.end {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #e53935;
+  color: white;
+  font-size: 12px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+/* Optional hover effect */
+.call-screen .btn.end:hover {
+  background: #c62828;
+}
