@@ -62,9 +62,9 @@ const [showSignup, setShowSignup] = useState(false);
   //   setUser(res.data.user);
   // };
   const handleLogin = async (email, password) => {
-    const API_URL = import.meta.env.VITE_API_URL;
+    const BACKEND_URL = "https://video-call-app-3jh8.onrender.com/";
     const res = await axios.post(
-      `http://${API_URL}:5000/api/auth/login`,
+      `http://${BACKEND_URL}:5000/api/auth/login`,
       { email, password }
     );
     setUser(res.data.user);
