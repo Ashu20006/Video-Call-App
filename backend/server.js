@@ -10,7 +10,7 @@ const app = express();
 
 /* ---------- CORS FIX (IMPORTANT) ---------- */
 app.use(cors({
-  origin: "https://video-call-app-oxhr.vercel.app/",              // allow all origins (for ngrok/testing)
+  origin: "*",              // allow all origins (for ngrok/testing)
   methods: ["GET", "POST"],
   credentials: true
 }));
