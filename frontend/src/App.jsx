@@ -64,7 +64,7 @@ const [showSignup, setShowSignup] = useState(false);
   const handleLogin = async (email, password) => {
     const BACKEND_URL = "https://video-call-app-3jh8.onrender.com/";
     const res = await axios.post(
-      `http://${BACKEND_URL}:5000/api/auth/login`,
+      `${BACKEND_URL}/api/auth/login`,
       { email, password }
     );
     setUser(res.data.user);
@@ -73,7 +73,7 @@ const [showSignup, setShowSignup] = useState(false);
   // ---------------- SOCKET SETUP ----------------
   useEffect(() => {
     if (user) {
-      socketRef.current = io(`${window.location.hostname}:5000`);
+      socketRef.current = io("https://video-call-app-3jh8.onrender.com");
 
       // Tell server this user is online
       socketRef.current.emit("join", user.id);
